@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
       include: [{ model: Category }, { model: Tag, through: ProductTag }],
     });
     if (!productData) {
-      res.status(400).json({ message: '┐(⎚ ꞈ ⎚)┌ no product found with this id...' });
+      res.status(404).json({ message: '┐(⎚ ꞈ ⎚)┌ no product found with this id...' });
       return;
     }
     res.status(200).json(productData);
@@ -112,13 +112,13 @@ router.delete('/:id', async (req, res) => {
     });
     // returns a message if the id dne 
     if (!productData) {
-      res.status(400).json({ message: '┐(⎚ ꞈ ⎚)┌ no product found with this id...' });
+      res.status(404).json({ message: '┐(⎚ ꞈ ⎚)┌ no product found with this id...' });
       return;
     }
     // else tell the user that the process was successful
     return res.status(200).json({ message: 'ᕙ[⎚◡⎚]ᕗ success' });
   } catch (error) {
-    res.status(400).json(error);
+    res.status(500).json(error);
   }
 });
 

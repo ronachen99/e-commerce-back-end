@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
     });
     // returns a message if the id dne 
     if (!categoryData) {
-      res.status(400).json({ message: '┐(⎚ ꞈ ⎚)┌ no category found with this id...' });
+      res.status(404).json({ message: '┐(⎚ ꞈ ⎚)┌ no category found with this id...' });
       return;
     }
     res.status(200).json(categoryData);
@@ -56,13 +56,13 @@ router.put('/:id', async (req, res) => {
     });
     // returns a message if the id dne 
     if (!categoryData[0]) {
-      res.status(400).json({ message: '┐(⎚ ꞈ ⎚)┌ no category found with this id...' });
+      res.status(404).json({ message: '┐(⎚ ꞈ ⎚)┌ no category found with this id...' });
       return;
     }
     // else tell the user that the process was successful
     res.status(200).json({ message: 'ᕙ[⎚◡⎚]ᕗ success' });
   } catch (error) {
-    res.status(400).json(error);
+    res.status(500).json(error);
   }
 });
 
@@ -76,13 +76,13 @@ router.delete('/:id', async (req, res) => {
     });
     // returns a message if the id dne 
     if (!categoryData) {
-      res.status(400).json({ message: '┐(⎚ ꞈ ⎚)┌ no category found with this id...' });
+      res.status(404).json({ message: '┐(⎚ ꞈ ⎚)┌ no category found with this id...' });
       return;
     }
     // else tell the user that the process was successful
     return res.status(200).json({ message: 'ᕙ[⎚◡⎚]ᕗ success' });
   } catch (error) {
-    res.status(400).json(error);
+    res.status(500).json(error);
   }
 });
 
