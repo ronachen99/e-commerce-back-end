@@ -17,7 +17,6 @@ The purpose of creating this repository is to integrate cutting-edge technologie
 ## Demonstration
 Application Demonstration:\
 Watch it on [Google Drive](https://drive.google.com/file/d/1G16PNOc2ByignvzhfrgInHtc4C0RSdWQ/view)
-<video alt='walkthrough video of the routes using the RESTful apis via Insomnia' src="./Assets/E-Commerce%20Backend.mp4" controls title="Title"></video>
 
 Application Preview:\
 Screenshot of Insomnia Folders:\
