@@ -65,8 +65,10 @@ To access the application:
 1. Clone the repository from GitHub.
 2. Enter username and password in the ".env.Example" file, and rename the file to ".env"
 3. Right click on the Main folder in the explorer section and select "Open in Integrated Terminal". 
-4. Type "node server" or "npm start" in the terminal.
-5. Open up Insomnia and enter routes:
+4. Create database with MySql (i.e. source db/schema.sql;), after login in (i.e., -uroot -p).
+5. Seed the database by typing "node seeds/index.js".
+6. Type "node server" or "npm start" in the terminal.
+7. Open up Insomnia and enter routes:
     1. GET/POST categories via http://localhost:3001/api/categories
     2. GET/PUT/DELETE category by ID via http://localhost:3001/api/categories/(your-id-here)
     3. GET/POST products via http://localhost:3001/api/products
